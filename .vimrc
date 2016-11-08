@@ -22,6 +22,8 @@ filetype plugin indent on
     nnoremap <C-H> <C-W><C-H>
 "   Code folding on space
     nnoremap <space> za
+"   <space> + g binds to goto declaration of function/class
+    map <space>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "Turn on folding at indent level
 set foldmethod=indent
@@ -32,6 +34,9 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " UTF-8 Support
 set encoding=utf-8
+
+" YCM window definitely closes
+let g:ycm_autoclose_preview_window_after_completion=1
 
 "Python indentation settings (PEP8)
 au BufNewFile,BufRead *.py
