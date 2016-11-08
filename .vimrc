@@ -29,9 +29,6 @@ filetype plugin indent on
 set foldmethod=indent
 set foldlevel=99
 
-" Flag extraneous whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
 " UTF-8 Support
 set encoding=utf-8
 
