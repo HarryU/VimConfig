@@ -29,5 +29,6 @@ Now compile YouCompleteMe:
 ```bash
 sudo apt-get install build-essential cmake
 cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
 ./install.py
 ```
