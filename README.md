@@ -27,7 +27,7 @@ Open VIm, and enter the command ```:PluginInstall```.
 Now compile YouCompleteMe:
 
 ```bash
-sudo apt-get install build-essential make
+sudo apt-get install build-essential cmake
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 ```
