@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin '2072/PHP-Indenting-for-VIm'
 
 call vundle#end()
 filetype plugin indent on
@@ -50,6 +51,9 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+
+au BufNewFile,BufRead *.php
+    \ set filetype=php |
 
 au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
