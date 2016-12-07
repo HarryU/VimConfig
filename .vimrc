@@ -66,4 +66,4 @@ set number
 set cursorline
 set showmatch
 let python_highlight_all = 1
-colo elflord
+colo desert 
