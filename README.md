@@ -5,7 +5,7 @@ Pull the repository to a any location. Create a symbolic link to the pulled .vim
 
 ```bash
 cd
-git clone http://192.168.1.219:8081/git/harry/VimConfig.git
+git clone https://harry:GwG5KzFNZ3uk@git.153.duckdns.org/SysAdmin/VimConfig.git
 ln -s ~/VimConfig/.vimrc ~/.vimrc
 ```
 Now make sure the VIm is the full version with Python support:
