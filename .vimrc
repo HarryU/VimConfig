@@ -33,6 +33,9 @@ filetype plugin indent on
     nnoremap <space> za
 "   <space> + g binds to goto declaration of function/class
     map <space>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"   Open new splits to the right or below instead of left or above.
+    set splitbelow
+    set splitright
 
 "Turn on folding at indent level
 set foldmethod=indent
