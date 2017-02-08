@@ -65,6 +65,13 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
+"Allow mouse resizing of splits in putty
+set mouse+=a
+if &term =~ '^screen'
+	"tmux knows the extended mouse mode
+	set ttymouse=xterm2
+endif
+
 "Visual changes
 syntax enable
 set number
