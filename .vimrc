@@ -23,6 +23,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()
 filetype plugin indent on
 
+"Settings for syntastic
+let g:syntastic_check_on_open=1
+
 "Key binding changes
 "   Navigation between splits: Ctrl+<vim navigation key>
     nnoremap <C-J> <C-W><C-J>
