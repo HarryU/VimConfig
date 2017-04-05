@@ -32,3 +32,13 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py
 ```
+
+Install tmux:
+```bash
+sudo apt-get install tmux
+```
+
+Links:
+
+* [tmux cheatsheet](https://linuxacademy.com/blog/wp-content/uploads/2016/08/tmux-3.png)
+* [vim cheatsheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
