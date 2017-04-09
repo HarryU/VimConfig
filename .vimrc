@@ -7,7 +7,6 @@ call vundle#begin()
 
 " Add plugins here
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
@@ -15,10 +14,10 @@ Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jnurmine/Zenburn'
 
 call vundle#end()
 filetype plugin indent on
@@ -32,17 +31,11 @@ let g:syntastic_check_on_open=1
     nnoremap <C-K> <C-W><C-K>
     nnoremap <C-L> <C-W><C-L>
     nnoremap <C-H> <C-W><C-H>
-"   Code folding on space
-    nnoremap <space> za
 "   <space> + g binds to goto declaration of function/class
     map <space>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "   Open new splits to the right or below instead of left or above.
     set splitbelow
     set splitright
-
-"Turn on folding at indent level
-set foldmethod=indent
-set foldlevel=99
 
 " UTF-8 Support
 set encoding=utf-8
@@ -55,7 +48,6 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
