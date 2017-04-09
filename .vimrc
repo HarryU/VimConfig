@@ -39,6 +39,7 @@ let g:syntastic_check_on_open=1
 
 " Snippet shortcuts
 nnoremap ,html :-1read $HOME/VimConfig/snippets/skeleton.html<CR>3jwf>a
+nnoremap ,def :-1read $HOME/VimConfig/snippets/method.py<CR>3la
 
 " UTF-8 Support
 set encoding=utf-8
