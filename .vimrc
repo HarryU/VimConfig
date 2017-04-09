@@ -67,10 +67,16 @@ if &term =~ '^screen'
 	set ttymouse=xterm2
 endif
 
+if has('gui_running')
+   set background=dark
+   colorscheme solarized
+ else
+   colorscheme zenburn
+endif
+
 "Visual changes
 syntax enable
 set number
 set cursorline
 set showmatch
 let python_highlight_all = 1
-colo desert 
