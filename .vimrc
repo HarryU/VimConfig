@@ -37,6 +37,9 @@ let g:syntastic_check_on_open=1
     set splitbelow
     set splitright
 
+" Snippet shortcuts
+nnoremap ,html :-1read $HOME/VimConfig/snippets/skeleton.html<CR>3jwf>a
+
 " UTF-8 Support
 set encoding=utf-8
 
