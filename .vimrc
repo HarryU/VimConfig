@@ -25,6 +25,16 @@ filetype plugin indent on
 "Settings for syntastic
 let g:syntastic_check_on_open=1
 
+" TODO: Learn to use hjkl - until then, arrow keys disabled!!!
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 "Key binding changes
 "   Navigation between splits: Ctrl+<vim navigation key>
 let g:tmux_navigator_no_mappings = 1
