@@ -5,7 +5,7 @@ Pull the repository to a any location. Create a symbolic link to the pulled .vim
 
 ```bash
 cd
-git clone https://harry:GwG5KzFNZ3uk@git.153.duckdns.org/SysAdmin/VimConfig.git
+git clone git@github.com:HarryU/VimConfig.git
 ln -s ~/VimConfig/.vimrc ~/.vimrc
 ```
 Now make sure the VIm is the full version with Python support:
@@ -32,3 +32,13 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py
 ```
+
+Install tmux:
+```bash
+sudo apt-get install tmux
+```
+
+Links:
+
+* [tmux cheatsheet](https://linuxacademy.com/blog/wp-content/uploads/2016/08/tmux-3.png)
+* [vim cheatsheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
