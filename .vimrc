@@ -27,6 +27,7 @@ let g:syntastic_check_on_open=1
 
 "Key binding changes
 "   Navigation between splits: Ctrl+<vim navigation key>
+let g:tmux_navigator_no_mappings = 1
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -46,6 +47,9 @@ set encoding=utf-8
 
 " YCM window definitely closes
 let g:ycm_autoclose_preview_window_after_completion=1
+
+" Save all vim panes when switching to a tmux pane
+let g:tmux_navigator_save_on_switch = 2
 
 "Python indentation settings (PEP8)
 au BufNewFile,BufRead *.py
