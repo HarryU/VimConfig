@@ -26,8 +26,19 @@ filetype plugin indent on
 "Settings for syntastic
 let g:syntastic_check_on_open=1
 
+" TODO: Learn to use hjkl - until then, arrow keys disabled!!!
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 "Key binding changes
 "   Navigation between splits: Ctrl+<vim navigation key>
+let g:tmux_navigator_no_mappings = 1
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -51,6 +62,9 @@ let g:ycm_autoclose_preview_window_after_completion=1
 
 " Vim Slime
 let g:slime_target = "tmux"
+
+" Save all vim panes when switching to a tmux pane
+let g:tmux_navigator_save_on_switch = 2
 
 "Python indentation settings (PEP8)
 au BufNewFile,BufRead *.py
