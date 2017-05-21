@@ -7,6 +7,7 @@ Pull the repository to a any location. Create a symbolic link to the pulled .vim
 cd
 git clone git@github.com:HarryU/VimConfig.git
 ln -s ~/VimConfig/.vimrc ~/.vimrc
+ln -s ~/VimConfig/.tmux.conf ~/.tmux.conf
 ```
 Now make sure the VIm is the full version with Python support:
 
