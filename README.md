@@ -34,12 +34,14 @@ git submodule update --init --recursive
 ./install.py
 ```
 
-Install tmux:
+Install tmux and add powerline config files:
 ```bash
 sudo apt-get install tmux
+ln -s ~/VimConfig/powerline /usr/local/lib/python2.7/dist-packages/powerline
 ```
 
 Links:
 
 * [tmux cheatsheet](https://linuxacademy.com/blog/wp-content/uploads/2016/08/tmux-3.png)
 * [vim cheatsheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
+* [powerline docs](http://powerline.readthedocs.io/en/master/index.html)
