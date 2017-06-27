@@ -95,7 +95,7 @@ if has('persistent_undo')
 endif
 
 " Set colorscheme 
-colo zenburn
+colo desert
 
 "Visual changes
 syntax enable
@@ -103,3 +103,5 @@ set number
 set cursorline
 set showmatch
 let python_highlight_all = 1
+
+set incsearch
