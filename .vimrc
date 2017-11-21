@@ -7,24 +7,27 @@ call vundle#begin()
 
 " Add plugins here
 Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'rust-lang/rust.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jpalardy/vim-slime'
 Plugin 'jnurmine/Zenburn'
+" Languages
+Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-scripts/indentpython.vim'
+" Linting
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
 
 "Settings for syntastic
 let g:syntastic_check_on_open=1
+let g:syntastic_rust_checkers = ['rustc']
 
 "Key binding changes
 "   Navigation between splits: Ctrl+<vim navigation key>
@@ -55,6 +58,9 @@ let g:slime_target = "tmux"
 
 " Save all vim panes when switching to a tmux pane
 let g:tmux_navigator_save_on_switch = 2
+
+" Run RustFmt on filesave
+let g:rustfmt_autosave = 1
 
 hi Trail ctermbg=red guibg=red
 
