@@ -56,6 +56,8 @@ let g:slime_target = "tmux"
 " Save all vim panes when switching to a tmux pane
 let g:tmux_navigator_save_on_switch = 2
 
+hi Trail ctermbg=red guibg=red
+
 "Python indentation settings (PEP8)
 au BufNewFile,BufRead *.py
 			\ set tabstop=4 |
@@ -72,6 +74,7 @@ au BufNewFile,BufRead *.js,*.html,*.css
 			\ set tabstop=2 |
 			\ set softtabstop=2 |
 			\ set shiftwidth=2 |
+au BufWinEnter * match Trail /\s\+$/ " Copy pasted from http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 
 "Allow mouse resizing of splits in putty
 set mouse+=a
