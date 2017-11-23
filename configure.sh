@@ -1,7 +1,10 @@
 #!/bin/bash
+# Use:
+# curl https://raw.githubusercontent.com/HarryU/VimConfig/master/configure.sh | bash
+# to get the config script.
 
 # Update and upgrade package
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update && sudo apt-get -y upgrade
 
 # Install packages
 declare -a packages=("cmake"
@@ -24,7 +27,9 @@ do
 done
 
 # Install rustup and related things
-curl https://sh.rustup.rs -sSf | sh
+wget https://sh.rustup.rs > rustup.sh
+sh rustup.sh -y
+rm rustup.sh
 cargo install xargo
 
 # Setup vim and tmux
@@ -39,3 +44,4 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursvie
 ./install.py
 ln -s ~/VimConfig/powerline /usr/local/lib/python2.7/dist-packages/powerline
+rm configure.sh

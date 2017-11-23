@@ -81,6 +81,7 @@ au BufNewFile,BufRead *.js,*.html,*.css
 			\ set softtabstop=2 |
 			\ set shiftwidth=2 |
 au BufWinEnter * match Trail /\s\+$/ " Copy pasted from http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+nmap <F8> :TagbarToggle<CR>
 
 "Allow mouse resizing of splits in putty
 set mouse+=a
