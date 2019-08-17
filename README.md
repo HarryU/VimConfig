@@ -17,27 +17,20 @@ sudo apt-get update
 sudo apt-get install vim
 ```
 
-Clone [Vundle](https://github.com/VundleVim/Vundle.vim), a VIm package manager.
-
-```
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-
-Open VIm, and enter the command ```:PluginInstall```.
+Open VIm, and enter the command ```:PlugInstall```.
 
 Now compile YouCompleteMe:
 
 ```bash
 sudo apt-get install build-essential cmake
 cd ~/.vim/bundle/YouCompleteMe
-git submodule update --init --recursive
-./install.py
+python3 install.py --clang-completer --rust-completer
 ```
 
-Install tmux and add powerline config files:
+Install tmux and tmux plugin manager:
 ```bash
 sudo apt-get install tmux
-ln -s ~/VimConfig/powerline /usr/local/lib/python2.7/dist-packages/powerline
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Links:

@@ -1,31 +1,36 @@
 set nocompatible
-filetype off  
 
-" Setup Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Setup vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin()
 
 " Add plugins here
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jpalardy/vim-slime'
-Plugin 'jnurmine/Zenburn'
+Plug 'Valloric/YouCompleteMe'
+Plug 'nvie/vim-flake8'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'jpalardy/vim-slime'
+Plug 'jnurmine/Zenburn'
 " Languages
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'rust-lang/rust.vim'
-Plugin 'vim-scripts/indentpython.vim'
+Plug '2072/PHP-Indenting-for-VIm'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-scripts/indentpython.vim'
 " Linting
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
+" Snippet manager
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
-"Settings for syntastic
+" Settings for syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_rust_checkers = ['rustc']
 
@@ -103,6 +108,16 @@ if has('persistent_undo')
 	let &undodir = myUndoDir
 	set undofile
 endif
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Set colorscheme 
 colo desert
